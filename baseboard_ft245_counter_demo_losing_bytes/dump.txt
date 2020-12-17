@@ -1,0 +1,139 @@
+Device = 0
+Flags = 0x2
+Type = 0x6
+ID = 0x4036010
+LocId = 0x30C1
+SN = FT4DVACIA
+Description = USB <-> Serial Converter A
+Handle = 0x0
+
+missed byte at 509, last lost byte 509 ago!
+buf[509] = 235
+buf[510] = 237
+
+missed byte at 1019, last lost byte 510 ago!
+buf[1019] = 234
+buf[1020] = 236
+
+missed byte at 1529, last lost byte 510 ago!
+buf[1529] = 233
+buf[1530] = 235
+
+missed byte at 2039, last lost byte 510 ago!
+buf[2039] = 232
+buf[2040] = 234
+
+missed byte at 2549, last lost byte 510 ago!
+buf[2549] = 231
+buf[2550] = 233
+
+missed byte at 3059, last lost byte 510 ago!
+buf[3059] = 230
+buf[3060] = 232
+
+missed byte at 3569, last lost byte 510 ago!
+buf[3569] = 229
+buf[3570] = 231
+
+missed byte at 4079, last lost byte 510 ago!
+buf[4079] = 228
+buf[4080] = 230
+
+missed byte at 4589, last lost byte 510 ago!
+buf[4589] = 227
+buf[4590] = 229
+
+missed byte at 5099, last lost byte 510 ago!
+buf[5099] = 226
+buf[5100] = 228
+
+missed byte at 5609, last lost byte 510 ago!
+buf[5609] = 225
+buf[5610] = 227
+
+missed byte at 6119, last lost byte 510 ago!
+buf[6119] = 224
+buf[6120] = 226
+
+missed byte at 6629, last lost byte 510 ago!
+buf[6629] = 223
+buf[6630] = 225
+
+missed byte at 7139, last lost byte 510 ago!
+buf[7139] = 222
+buf[7140] = 224
+
+missed byte at 7649, last lost byte 510 ago!
+buf[7649] = 221
+buf[7650] = 223
+
+missed byte at 8159, last lost byte 510 ago!
+buf[8159] = 220
+buf[8160] = 222
+
+missed byte at 8669, last lost byte 510 ago!
+buf[8669] = 219
+buf[8670] = 221
+
+missed byte at 9179, last lost byte 510 ago!
+buf[9179] = 218
+buf[9180] = 220
+
+missed byte at 9689, last lost byte 510 ago!
+buf[9689] = 217
+buf[9690] = 219
+
+missed byte at 10199, last lost byte 510 ago!
+buf[10199] = 216
+buf[10200] = 218
+
+missed byte at 10709, last lost byte 510 ago!
+buf[10709] = 215
+buf[10710] = 217
+
+missed byte at 11219, last lost byte 510 ago!
+buf[11219] = 214
+buf[11220] = 216
+
+missed byte at 11729, last lost byte 510 ago!
+buf[11729] = 213
+buf[11730] = 215
+
+missed byte at 12239, last lost byte 510 ago!
+buf[12239] = 212
+buf[12240] = 214
+
+missed byte at 12749, last lost byte 510 ago!
+buf[12749] = 211
+buf[12750] = 213
+
+missed byte at 13259, last lost byte 510 ago!
+buf[13259] = 210
+buf[13260] = 212
+
+missed byte at 13769, last lost byte 510 ago!
+buf[13769] = 209
+buf[13770] = 211
+
+missed byte at 14279, last lost byte 510 ago!
+buf[14279] = 208
+buf[14280] = 210
+
+missed byte at 14789, last lost byte 510 ago!
+buf[14789] = 207
+buf[14790] = 209
+
+missed byte at 15299, last lost byte 510 ago!
+buf[15299] = 206
+buf[15300] = 208
+
+missed byte at 15809, last lost byte 510 ago!
+buf[15809] = 205
+buf[15810] = 207
+
+missed byte at 16319, last lost byte 510 ago!
+buf[16319] = 204
+buf[16320] = 206
+
+Read 1GB from the FTDI in 0.0 seconds.
+Average read speed: 8650488.0 Mbps.

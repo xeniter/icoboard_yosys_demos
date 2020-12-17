@@ -1,0 +1,20 @@
+
+set_io data[0] H11
+set_io data[1] A6
+set_io data[2] A7
+set_io data[3] D7
+set_io data[4] C9
+set_io data[5] C10
+set_io data[6] C6
+set_io data[7] C7
+
+#set_io rx_empty                 
+set_io tx_full             P13             
+set_io read_n              D4
+set_io write_n             K11
+set_io send_immediately_n  D5
+set_io clock_60mhz         D9
+set_io output_enable_n     D6
+
+set_io  power_led_n     F7 # grün links oben
+set_io  tx_active_led_n K9 # rot rechts unten
