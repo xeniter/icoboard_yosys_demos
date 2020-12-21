@@ -51,6 +51,20 @@ With great FTDI support I have solved problem TXE signal can go HIGH on falling 
 
 https://community.intel.com/t5/Programmable-Devices/FT2232H-245-Synchronous-FIFO-Mode-problem/td-p/111192
 
+
+## logic analyzer logs
+
+Trigger is on rising edge of nTXE, as you can see it is direct at the falling clk edge
+
+baseboard_ft245_counter_demo_losing_bytes
+
+![not_working_picture](./screenshots/ntxe_falling_loosing_bytes_version.png)
+
+baseboard_ft245_counter_demo_fixed
+
+![working_picture](./screenshots/ntxe_falling_loosing_bytes_version.png)
+
+
 ## still missing one byte?
 
 yes have no clue why till now, if you found something or have an idea please share
