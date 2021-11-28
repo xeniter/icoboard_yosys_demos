@@ -1,0 +1,19 @@
+Device = 0
+Flags = 0x2
+Type = 0x6
+ID = 0x4036010
+LocId = 0x3061
+SN = FT4DVACIA
+Description = USB <-> Serial Converter A
+Handle = 0x0
+
+missed byte at 509, last lost byte 509 ago in round 0!
+buf[509] = 126
+buf[510] = 111
+
+missed byte at 35189, last lost byte 34680 ago in round 0!
+buf[35189] = 230
+buf[35190] = 229
+
+Read 1GB from the FTDI in 0.6 seconds.
+Average read speed: 14536.4 Mbps.

@@ -67,4 +67,4 @@ baseboard_ft245_counter_demo_fixed
 
 ## still missing one byte?
 
-yes have no clue why till now, if you found something or have an idea please share
+at first readout you get two times 0 before counter is running proper

@@ -42,32 +42,33 @@ int main(int argc, char** argv) {
                 FT_SetLatencyTimer(handle, 2) == FT_OK &&
                 FT_SetUSBParameters(handle, 65536, 65536) == FT_OK &&
                 FT_SetFlowControl(handle, FT_FLOW_RTS_CTS, 0, 0) == FT_OK &&
-                FT_Purge(handle, FT_PURGE_RX | FT_PURGE_TX) == FT_OK &&
+                
+                // don't flush otherwise you have to throw first readout away
+                //FT_Purge(handle, FT_PURGE_RX | FT_PURGE_TX) == FT_OK &&  
+                
                 FT_SetTimeouts(handle, 1000, 1000) == FT_OK) {
 					
                 // connected and configured successfully
-                // read 1GB of data from the FTDI/FPGA
+                // read 1024*65536 bytes of data from the FTDI/FPGA
+                
                 unsigned char rxBuffer[65536] = { 0 };
                 unsigned long byteCount = 0;
                 time_t startTime = clock();
-                //for(int i = 0; i < 16384; i++) {
+                
                 for(int i = 0; i < 1024; i++) {
                     if(FT_Read(handle, rxBuffer, 65536, &byteCount) != FT_OK || byteCount != 65536) {
                         printf("Error while reading from the device. Exiting.\r\n");
                         return 1;
                     }
                     
-                    int last_lost_byte = 0;
                     for(int j=0; j < 65536-1; j++) {
                         
                         unsigned char a = rxBuffer[j];
                         unsigned char b = rxBuffer[j+1];
                     
-                        if ( (unsigned char)(a+1) != b ) {
-                            printf("missed byte at %d, last lost byte %u ago in round %u!\n", j, j-last_lost_byte, i);
-                            printf("buf[%u] = %u\n", j, a);
-                            printf("buf[%u] = %u\n\n", j+1, b);
-                            last_lost_byte = j;
+                        if ( (unsigned char)(a+1) != b ) {                            
+                            printf("%d: buf[%u] = %u\n",   i, j,   a);
+                            printf("%d: buf[%u] = %u\n\n", i, j+1, b);                            
                         }
                     }
                     
@@ -75,9 +76,13 @@ int main(int argc, char** argv) {
                 }
                 time_t stopTime = clock();
                 double secondsElapsed = (double)(stopTime - startTime) / CLOCKS_PER_SEC;
-                double mbps = 8589.934592 / secondsElapsed;
+                
                 printf("Read 1GB from the FTDI in %0.1f seconds.\r\n", secondsElapsed);
-                printf("Average read speed: %0.1f Mbps.\r\n", mbps);
+                
+                // 65536 * 1024 = 67108864bytes
+                double bytes_per_sec = 67108864 / secondsElapsed;
+                printf("Average read speed: %0.1f bytes/s.\r\n", bytes_per_sec); // looks too much todo look why
+                
                 return 0;
 				
             } else {
